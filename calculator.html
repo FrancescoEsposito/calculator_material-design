@@ -2,137 +2,140 @@
 <html>
 <head>
 
-	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>Calculator in Material Design</title>
+
  	<!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+ 	<!--Our CSS-->
+ 	<link rel="stylesheet" type="text/css" href="css/ourcss.css">
 
- 	<style type="text/css">
-
- 		p{
- 			font-size: 21px;
- 		}
-
- 		.row {
- 			margin-bottom: 0; 
- 		}
-
- 		a {
- 			font-size: 21px;
- 			margin: 21px 0;
- 			margin-left: 30px;
- 		}
-
- 		#result {
- 			font-size: 41px;
- 			margin: 30px;
- 			margin-top: 50px;
- 			margin-right: 10%;
- 		}
-
- 		#result i{
- 			margin-top: 9px;
- 		}
-
- 		#menu {
- 			line-height: 139px;
- 			margin-left: 10%;
- 		}
-
- 		#sidenav-overlay{
- 			background-color: rgba(0,0,0,0);
- 		}
-
- 		#side-nav {
- 			margin: 0 !important;
- 		}
-
- 		#slide-out {
- 			position: absolute;
- 			height: calc(90% + 47px);
- 			width: 24.2%;
- 			background-color: #1e88e5;
- 			margin-left: 0 !important;
- 		}
-
- 		.container {
- 			margin-top: 10%;
- 			position: relative;
- 			overflow: hidden;
- 		}
-
- 		.row .col.s12 {
- 			margin-left: 5px;
- 		}
-
- 		.marginzero {
- 			margin-left: 0 !important;
- 		}
-
- 	</style>
-
- 	<meta charset="utf-8">
- 	<!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 
 	<div class="container z-depth-3">
 		<div id="slide-out" class="col s3 side-nav">
 		    <div class="row">
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">sin</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">cos</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">tan</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">ln</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">log</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">!</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">^</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">e</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">(</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">)</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">(</p></div>
-		    	<div class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding"><p class="white-text no-padding">)</p></div>
+		    	<div onClick="btnSin()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">sin</p>
+		    	</div>
+		    	<div onClick="btnCos()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">cos</p>
+		    	</div>
+		    	<div onClick="btnTan()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">tan</p>
+		    	</div>
+		    	<div onClick="btnPiGreco()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">π</p>
+		    	</div>
+		    	<div onClick="btnLog()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">log(x)</p>
+		    	</div> 
+		    	<div onClick="btnE()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">e</p>
+		    	</div> 
+		    	<div onClick="btnPoten()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">x^2</p>
+		    	</div> 
+		    	<div onClick="btnSqrt()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">√</p>
+		    	</div> 
+		    	<div onClick="btnParOpened()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">(</p>
+		    	</div>
+		    	<div onClick="btnParClosed()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">)</p>
+		    	</div>
+		    	<div onClick="btnPerc()" class="marginzero col s12 blue darken-1 waves-effect waves-blue center-align no-padding">
+		    		<p class="white-text no-padding">%</p>
+		    	</div>
 		    </div>
 		</div>
 		<div class="row">
 			<div class="col s12 orange darken-2 no-padding">
-				<a href="#" data-activates="slide-out" class="waves-effect waves-orange button-collapse"><i id="menu" class="small material-icons white-text">menu</i></a>
-				<p id="result" class="white-text right">Ciaone<a class="waves-effect waves-orange"><i class="small material-icons white-text">clear</i></a></p>
+				<div class="row">
+					<div id="menu" class="col s2">
+						<a href="#" data-activates="slide-out" class="waves-effect waves-orange button-collapse">
+							<i id="menu" class="small material-icons white-text">menu</i>
+						</a>
+					</div>
+					<div id="resultmarginright" class="col s10">
+						<p class="white-text right">
+							<input id="display" style="width: 73%; padding: 0; border: 0; background-color: rgba(0,0,0,0); text-align: right; margin-top: 0;"  placeholder="0">
+							<a onClick="btnClear()" class="waves-effect waves-orange">
+								<i class="small material-icons white-text">clear</i>
+							</a>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
         <div class="row">
 	      	<div class="col s3 no-padding">
-	      		<div class="col s12 blue darken-1 waves-effect waves-blue center-align"><p class="center-align white-text">+</p></div>
-			    <div class="col s12 blue darken-1 waves-effect waves-blue center-align"><p class="center-align white-text">-</p></div>
-			    <div class="col s12 blue darken-1 waves-effect waves-blue center-align"><p class="center-align white-text">÷</p></div>
-			    <div class="col s12 blue darken-1 waves-effect waves-blue center-align"><p class="center-align white-text">x</p></div>
+	      		<div onClick="btnPlus()" class="col s12 blue darken-1 waves-effect waves-blue center-align">
+	      			<p class="center-align white-text">+</p>
+	      		</div>
+			    <div onClick="btnMinus()" class="col s12 blue darken-1 waves-effect waves-blue center-align">
+			    	<p class="center-align white-text">-</p>
+			    </div>
+			    <div onClick="btnDiv()" class="col s12 blue darken-1 waves-effect waves-blue center-align">
+			    	<p class="center-align white-text">÷</p>
+			    </div>
+			    <div onClick="btnMol()" class="col s12 blue darken-1 waves-effect waves-blue center-align">
+			    	<p class="center-align white-text">x</p>
+			    </div>
 	      	</div>
 	      	<div class="col s9 no-padding">
-        		<div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">1</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">2</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">3</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">4</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">5</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">6</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">7</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">8</p></div>	      
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">9</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">.</p></div>
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">0</p></div>	      
-			    <div class="col s4 teal accent-3 waves-effect waves-teal"><p class="center-align white-text">=</p></div>
+        		<div onClick="document.getElementById('display').value+='1'" class="col s4 teal accent-3 waves-effect waves-teal">
+        			<p class="center-align white-text">1</p>
+        		</div>
+			    <div onClick="document.getElementById('display').value+='2'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">2</p>
+			    </div>
+			    <div onClick="document.getElementById('display').value+='3'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">3</p>
+			    </div>
+			    <div onClick="document.getElementById('display').value+='4'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">4</p>
+			    </div>
+			    <div onClick="document.getElementById('display').value+='5'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">5</p>
+			    </div>
+			    <div onClick="document.getElementById('display').value+='6'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">6</p>
+			    </div>
+			    <div onClick="document.getElementById('display').value+='7'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">7</p>
+			    </div>
+			    <div onClick="document.getElementById('display').value+='8'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">8</p>
+			    </div>	      
+			    <div onClick="document.getElementById('display').value+='9'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">9</p>
+			    </div>
+			    <div onClick="btnDot()" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">.</p>
+			    </div>
+			    <div onclick="document.getElementById('display').value+='0'" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">0</p>
+			    </div>	      
+			    <div onclick="btnResult()" class="col s4 teal accent-3 waves-effect waves-teal">
+			    	<p class="center-align white-text">=</p>
+			    </div>
         	</div> 
 	    </div>
     </div>
-
 
 	<!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<!-- Compiled and minified JavaScript -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-  	<script type="text/javascript">
-  		$(".button-collapse").sideNav();
-  	</script>
+  	<!--Our JS-->
+  	<script type="text/javascript" src="js/ourjs.js"></script>
           
 </body>
 </html>
