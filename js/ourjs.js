@@ -41,7 +41,7 @@ function btnParOpened() {
 }
 
 function btnParClosed() {
-	document.getElementById('display').value += ')';
+	document.getElementById('display').value += ')';.
 }
   		
 function btnPoten() {
@@ -71,3 +71,5 @@ function btnLog() {
 function btnPiGreco() {
   	document.getElementById('display').value = Math.PI;
 }
+
+function verifica() {
