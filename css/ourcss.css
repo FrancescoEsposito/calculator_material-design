@@ -71,7 +71,7 @@ p{
  }
 
  .container {
- 	margin-top: 10%;
+ 	margin-top: 7%;
  	position: relative;
  	overflow: hidden;
  }
@@ -82,5 +82,6 @@ p{
 
  .marginzero {
  	margin-left: 0 !important;
-
  }
+
+ .fixed-action-btn.horizontal ul {top: 36%;}
