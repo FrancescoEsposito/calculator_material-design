@@ -84,4 +84,38 @@ p{
  	margin-left: 0 !important;
  }
 
+ .btn-floating {
+ 	background-color: none !important;
+ }
+
+ .btn-large:hover{
+ 	background-color: #F44136;
+ }
+
+ .redmenu {
+ 	background-color: #F44336 !important;
+ }
+
+ .pallino1 {
+ 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3c/600px_Rosso_e_Verde.png) !important;
+ 	-webkit-transform:rotate(45deg) !important;
+ 	background-size: 190% !important;
+ 	background-position: center !important;
+ }
+
+ .pallino2 {
+ 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/64/600px_Giallo_e_Viola.png) !important;
+ 	-webkit-transform:rotate(45deg) !important;
+ 	background-size: 190% !important;
+ 	background-position: center !important;
+ 	z-index: 999;
+ }
+
+ .pallino3 {
+ 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/15/600px_Arancione_e_Azzurro.png) !important;
+ 	-webkit-transform:rotate(45deg) !important;
+ 	background-size: 190% !important;
+ 	background-position: center !important;
+ }
+
  .fixed-action-btn.horizontal ul {top: 36%;}

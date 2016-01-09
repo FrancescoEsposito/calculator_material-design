@@ -72,44 +72,44 @@ function btnPiGreco() {
   	document.getElementById('display').value = Math.PI;
 }
 
-$('.rosso').click(function() {
+$('.pallino1').click(function() {
    $('.deep-orange').addClass('green');
    $('.green').removeClass('deep-orange');
    $('.light-blue').addClass('red');  
    $('.red').removeClass('light-blue');
 });
 
-$('.rosso').click(function() {
-   $('.lime').addClass('green');
-   $('.green').removeClass('lime');
-   $('.grey').addClass('red');  
-   $('.red').removeClass('grey');
+$('.pallino1').click(function() {
+   $('.amber').addClass('green');
+   $('.green').removeClass('amber');
+   $('.purple').addClass('red');  
+   $('.red').removeClass('purple');
 });
 
-$('.giallo').click(function() {
-   $('.red').addClass('grey');
-   $('.grey').removeClass('red');
-   $('.green').addClass('lime');  
-   $('.lime').removeClass('green');
+$('.pallino2').click(function() {
+   $('.red').addClass('purple');
+   $('.purple').removeClass('red');
+   $('.green').addClass('amber');  
+   $('.amber').removeClass('green');
 });
 
-$('.giallo').click(function() {
-   $('.light-blue').addClass('grey');
-   $('.grey').removeClass('light-blue');
-   $('.deep-orange').addClass('lime');  
-   $('.lime').removeClass('deep-orange');
+$('.pallino2').click(function() {
+   $('.light-blue').addClass('purple');
+   $('.purple').removeClass('light-blue');
+   $('.deep-orange').addClass('amber');  
+   $('.amber').removeClass('deep-orange');
 });
 
-$('.blu').click(function() {
+$('.pallino3').click(function() {
    $('.red').addClass('light-blue');
    $('.light-blue').removeClass('red');
    $('.green').addClass('deep-orange');  
    $('.deep-orange').removeClass('green');
 });
 
-$('.blu').click(function() {
-   $('.lime').addClass('deep-orange');
-   $('.deep-orange').removeClass('lime');
-   $('.grey').addClass('light-blue');  
-   $('.light-blue').removeClass('grey');
+$('.pallino3').click(function() {
+   $('.amber').addClass('deep-orange');
+   $('.deep-orange').removeClass('amber');
+   $('.purple').addClass('light-blue');  
+   $('.light-blue').removeClass('purple');
 });
