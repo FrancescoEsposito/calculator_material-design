@@ -77,6 +77,7 @@ $('.pallino1').click(function() {
    $('.green').removeClass('deep-orange');
    $('.light-blue').addClass('red');  
    $('.red').removeClass('light-blue');
+   $('#slide-out').css("background-color","#E53935");
 });
 
 $('.pallino1').click(function() {
@@ -91,6 +92,7 @@ $('.pallino2').click(function() {
    $('.purple').removeClass('red');
    $('.green').addClass('amber');  
    $('.amber').removeClass('green');
+   $('#slide-out').css("background-color","#8e24aa");
 });
 
 $('.pallino2').click(function() {
@@ -105,6 +107,7 @@ $('.pallino3').click(function() {
    $('.light-blue').removeClass('red');
    $('.green').addClass('deep-orange');  
    $('.deep-orange').removeClass('green');
+   $('#slide-out').css("background-color","#039be5");
 });
 
 $('.pallino3').click(function() {
