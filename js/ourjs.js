@@ -81,8 +81,8 @@ $('.pallino1').click(function() {
 });
 
 $('.pallino1').click(function() {
-   $('.amber').addClass('green');
-   $('.green').removeClass('amber');
+   $('.yellow').addClass('green');
+   $('.green').removeClass('yellow');
    $('.purple').addClass('red');  
    $('.red').removeClass('purple');
 });
@@ -90,16 +90,16 @@ $('.pallino1').click(function() {
 $('.pallino2').click(function() {
    $('.red').addClass('purple');
    $('.purple').removeClass('red');
-   $('.green').addClass('amber');  
-   $('.amber').removeClass('green');
+   $('.green').addClass('yellow');  
+   $('.yellow').removeClass('green');
    $('#slide-out').css("background-color","#8e24aa");
 });
 
 $('.pallino2').click(function() {
    $('.light-blue').addClass('purple');
    $('.purple').removeClass('light-blue');
-   $('.deep-orange').addClass('amber');  
-   $('.amber').removeClass('deep-orange');
+   $('.deep-orange').addClass('yellow');  
+   $('.yellow').removeClass('deep-orange');
 });
 
 $('.pallino3').click(function() {
@@ -111,8 +111,8 @@ $('.pallino3').click(function() {
 });
 
 $('.pallino3').click(function() {
-   $('.amber').addClass('deep-orange');
-   $('.deep-orange').removeClass('amber');
+   $('.yellow').addClass('deep-orange');
+   $('.deep-orange').removeClass('yellow');
    $('.purple').addClass('light-blue');  
    $('.light-blue').removeClass('purple');
 });
