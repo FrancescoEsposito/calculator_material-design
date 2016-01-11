@@ -1,19 +1,33 @@
 $(".button-collapse").sideNav();
 
+var operators = ['+', '-', '*', '/', '.'];
+
 function btnPlus() {
-	document.getElementById('display').value += '+';
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '+'; 
+  };
 }
 
 function btnMinus() {
-	document.getElementById('display').value += '-';
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '-'; 
+  };
 }
 
 function btnDiv() {
-	document.getElementById('display').value += '/';
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '/'; 
+  };
 }
 
 function btnMol() {
-	document.getElementById('display').value += '*';
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '*'; 
+  };
 }
 
 function btnClear() {
@@ -21,7 +35,10 @@ function btnClear() {
 }
 
 function btnDot() {
-	document.getElementById('display').value += '.';
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '.'; 
+  };
 }
 
 function btnResult() {
