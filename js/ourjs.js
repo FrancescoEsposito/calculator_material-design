@@ -1,6 +1,7 @@
 $(".button-collapse").sideNav();
 
-var operators = ['+', '-', '*', '/', '.', '(', ')', '%'];
+var operators = ['+', '-', '*', '/', '.', '%'];
+var parentesi = ['(',')'];
 
 // var che permette di non aggiungere operatori su operatori disabilitando la calcolatrice
 var operatorAfterResult = true;
@@ -12,7 +13,7 @@ var dot = false;
 
 // funzione che riporta numeri e operatori nell'espressione e nel display
 function n(number) {
-  //document.getElementById('display').dir = "rtl"; o .style.direction = "rtl";
+  //document.getElementById('display').dir = "rtl"; //o .style.direction = "rtl";
   // se il numero è 0 o si è gia ottenuto il risultato dell'operazione inizia da capo
   if(document.getElementById("display").value =="0" || document.getElementById("display").value==null || setup == true){
     document.getElementById("display").value = number;
@@ -36,7 +37,7 @@ function btnC() {
 }
 
 function btnPlus() {
-  document.getElementById('display').dir = "ltr";
+  //document.getElementById('display').dir = "ltr";
   var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
   if (search == -1){ 
       document.getElementById('display').value += '+';
@@ -95,7 +96,7 @@ function btnE() {
 }
 
 function btnParOpened() {
-  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  var search = parentesi.indexOf(document.getElementById('display').value.slice(-1),0);
   if (search == -1){ 
       document.getElementById('display').value += '(';
   };
@@ -103,7 +104,7 @@ function btnParOpened() {
 }
 
 function btnParClosed() {
-  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  var search = parentesi.indexOf(document.getElementById('display').value.slice(-1),0);
   if (search == -1){ 
       document.getElementById('display').value += ')';
   };
