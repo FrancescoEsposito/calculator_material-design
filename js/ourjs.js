@@ -1,6 +1,7 @@
 $(".button-collapse").sideNav();
 
-var operators = ['+', '-', '*', '/', '.', '%'];
+var operators = ['+', '-', '*', '/', '.', '(', '%'];
+var minusPar = ['+', '-', '*', '/', '.', '%'];
 var parentesi = ['(',')'];
 
 // var che permette di non aggiungere operatori su operatori disabilitando la calcolatrice
@@ -46,7 +47,7 @@ function btnPlus() {
 }
 
 function btnMinus() {
-  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  var search = minusPar.indexOf(document.getElementById('display').value.slice(-1),0);
   if (search == -1){ 
       document.getElementById('display').value += '-'; 
   };
