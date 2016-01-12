@@ -67,7 +67,10 @@
 					</div>
 					<div id="resultmarginright" class="col s10">
 						<p class="white-text right">
-							<input id="display" style="width: 73%; padding: 0; border: 0; background-color: rgba(0,0,0,0); text-align: right; margin-top: 0;" disabled value="" placeholder="0" type="text">
+							<input id="display" style="width: 60%; padding: 0; border: 0; background-color: rgba(0,0,0,0); text-align: right; margin-top: 0;" disabled value="" placeholder="0" type="text">
+							<a onClick="btnC()" style="margin-top: -10px;" class="waves-effect waves-default">
+								<i class="fa fa-arrow-circle-o-left white-text"></i>
+							</a>
 							<a onClick="btnClear()" style="margin-top: -10px;" class="waves-effect waves-default">
 								<i class="fa fa-trash-o fa-lg white-text"></i>
 							</a>
@@ -92,37 +95,37 @@
 			    </div>
 	      	</div>
 	      	<div class="col s9 no-padding">
-        		<div onClick="document.getElementById('display').value+='1'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+        		<div onClick="n(1);" class="col s4 light-blue darken-3 waves-effect waves-blue">
         			<p class="center-align white-text">1</p>
         		</div>
-			    <div onClick="document.getElementById('display').value+='2'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(2)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">2</p>
 			    </div>
-			    <div onClick="document.getElementById('display').value+='3'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(3)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">3</p>
 			    </div>
-			    <div onClick="document.getElementById('display').value+='4'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(4)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">4</p>
 			    </div>
-			    <div onClick="document.getElementById('display').value+='5'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(5)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">5</p>
 			    </div>
-			    <div onClick="document.getElementById('display').value+='6'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(6)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">6</p>
 			    </div>
-			    <div onClick="document.getElementById('display').value+='7'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(7)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">7</p>
 			    </div>
-			    <div onClick="document.getElementById('display').value+='8'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(8)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">8</p>
 			    </div>	      
-			    <div onClick="document.getElementById('display').value+='9'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onClick="n(9)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">9</p>
 			    </div>
 			    <div onClick="btnDot()" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">.</p>
 			    </div>
-			    <div onclick="document.getElementById('display').value+='0'" class="col s4 light-blue darken-3 waves-effect waves-blue">
+			    <div onclick="n(0)" class="col s4 light-blue darken-3 waves-effect waves-blue">
 			    	<p class="center-align white-text">0</p>
 			    </div>	      
 			    <div onclick="btnResult()" class="col s4 light-blue darken-3 waves-effect waves-blue">

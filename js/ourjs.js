@@ -2,11 +2,44 @@ $(".button-collapse").sideNav();
 
 var operators = ['+', '-', '*', '/', '.'];
 
+// var che permette di non aggiungere operatori su operatori disabilitando la calcolatrice
+var operatorAfterResult = true;
+
+// variabile che capisce se l'operazione è finita
+var setup = false;
+
+var dot = false;
+
+// funzione che riporta numeri e operatori nell'espressione e nel display
+function n(number) {
+  // se il numero è 0 o si è gia ottenuto il risultato dell'operazione inizia da capo
+  if(document.getElementById("display").value =="0" || document.getElementById("display").value==null || setup == true){
+    document.getElementById("display").value = number;
+    setup = false;
+  }
+  else {
+    document.getElementById("display").value += number;
+  };
+  operatorAfterResult = false;
+}
+
+function btnResult() {
+  document.getElementById('display').value = eval(document.getElementById('display').value);
+  setup = true;
+  dot = false;
+}
+
+//funzione che cancella l'ultimo valore digitato
+function btnC() { 
+  document.getElementById("display").value=document.getElementById("display").value.substring(0, document.getElementById("display").value.length-1); 
+}
+
 function btnPlus() {
   var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
   if (search == -1){ 
       document.getElementById('display').value += '+'; 
   };
+  setup = false;
 }
 
 function btnMinus() {
@@ -14,6 +47,7 @@ function btnMinus() {
   if (search == -1){ 
       document.getElementById('display').value += '-'; 
   };
+  setup = false;
 }
 
 function btnDiv() {
@@ -21,6 +55,7 @@ function btnDiv() {
   if (search == -1){ 
       document.getElementById('display').value += '/'; 
   };
+  setup = false;
 }
 
 function btnMol() {
@@ -28,10 +63,11 @@ function btnMol() {
   if (search == -1){ 
       document.getElementById('display').value += '*'; 
   };
+  setup = false;
 }
 
 function btnClear() {
-	document.getElementById('display').value = '';
+  document.getElementById('display').value = '';
 }
 
 function btnDot() {
@@ -39,54 +75,51 @@ function btnDot() {
   if (search == -1){ 
       document.getElementById('display').value += '.'; 
   };
-}
-
-function btnResult() {
-	document.getElementById('display').value = eval(document.getElementById('display').value);
+  setup = false;
 }
 
 function btnPerc() {
-	document.getElementById('display').value += '%';
+  document.getElementById('display').value += '%';
 }
 
 function btnE() {
-	document.getElementById('display').value = Math.E;
+  document.getElementById('display').value = Math.E;
 }
 
 function btnParOpened() {
-	document.getElementById('display').value += '(';
+  document.getElementById('display').value += '(';
 }
 
 function btnParClosed() {
-	document.getElementById('display').value += ')';
+  document.getElementById('display').value += ')';
 }
-  		
+      
 function btnPoten() {
-  	document.getElementById('display').value = Math.pow(document.getElementById('display').value,2);
+    document.getElementById('display').value = Math.pow(document.getElementById('display').value,2);
 }
 
 function btnSqrt() {
-  	document.getElementById('display').value = Math.sqrt(document.getElementById('display').value);
+    document.getElementById('display').value = Math.sqrt(document.getElementById('display').value);
 }
 
 function btnSin() {
-  	document.getElementById('display').value = Math.sin(document.getElementById('display').value);
+    document.getElementById('display').value = Math.sin(document.getElementById('display').value);
 }
 
 function btnCos() {
-  	document.getElementById('display').value = Math.cos(document.getElementById('display').value);
+    document.getElementById('display').value = Math.cos(document.getElementById('display').value);
 }
 
 function btnTan() {
-  	document.getElementById('display').value = Math.tan(document.getElementById('display').value);
+    document.getElementById('display').value = Math.tan(document.getElementById('display').value);
 }
 
 function btnLog() {
-  	document.getElementById('display').value = Math.log(document.getElementById('display').value);
+    document.getElementById('display').value = Math.log(document.getElementById('display').value);
 }
 
 function btnPiGreco() {
-  	document.getElementById('display').value = Math.PI;
+    document.getElementById('display').value = Math.PI;
 }
 
 $('.pallino1').click(function() {
