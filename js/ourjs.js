@@ -1,75 +1,155 @@
 $(".button-collapse").sideNav();
 
-function btnPlus() {
-	document.getElementById('display').value += '+';
-}
+var operators = ['+', '-', '*', '/', '.', '(', '%'];
+var minusPar = ['+', '-', '*', '/', '.', '%'];
+var parentesi = ['(',')'];
 
-function btnMinus() {
-	document.getElementById('display').value += '-';
-}
+// var che permette di non aggiungere operatori su operatori disabilitando la calcolatrice
+var operatorAfterResult = true;
 
-function btnDiv() {
-	document.getElementById('display').value += '/';
-}
+// variabile che capisce se l'operazione è finita
+var setup = false;
 
-function btnMol() {
-	document.getElementById('display').value += '*';
-}
+var dot = false;
 
-function btnClear() {
-	document.getElementById('display').value = '';
-}
-
-function btnDot() {
-	document.getElementById('display').value += '.';
+// funzione che riporta numeri e operatori nell'espressione e nel display
+function n(number) {
+  //document.getElementById('display').dir = "rtl"; //o .style.direction = "rtl";
+  // se il numero è 0 o si è gia ottenuto il risultato dell'operazione inizia da capo
+  if(document.getElementById("display").value =="0" || document.getElementById("display").value==null || setup == true){
+    document.getElementById("display").value = number;
+    setup = false;
+  }
+  else {
+    document.getElementById("display").value += number;
+  };
+  operatorAfterResult = false;
 }
 
 function btnResult() {
-	document.getElementById('display').value = eval(document.getElementById('display').value);
+  document.getElementById('display').value = eval(document.getElementById('display').value);
+  setup = true;
+  dot = false;
+}
+
+//funzione che cancella l'ultimo valore digitato
+function btnC() { 
+  document.getElementById("display").value=document.getElementById("display").value.substring(0, document.getElementById("display").value.length-1); 
+}
+
+function btnPlus() {
+  //document.getElementById('display').dir = "ltr";
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '+';
+  };
+  setup = false;
+}
+
+function btnMinus() {
+  var search = minusPar.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '-'; 
+  };
+  setup = false;
+}
+
+function btnDiv() {
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '/'; 
+  };
+  setup = false;
+}
+
+function btnMol() {
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '*'; 
+  };
+  setup = false;
+}
+
+function btnClear() {
+  document.getElementById('display').value = '';
+}
+
+function btnDot() {
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '.'; 
+  };
+  setup = false;
 }
 
 function btnPerc() {
-	document.getElementById('display').value += '%';
+  var search = operators.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '%';
+  };
+  setup = false;
 }
 
 function btnE() {
-	document.getElementById('display').value = Math.E;
+  document.getElementById('display').value = Math.E;
+  setup = true;
+  dot = false;
 }
 
 function btnParOpened() {
-	document.getElementById('display').value += '(';
+  var search = parentesi.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += '(';
+  };
+  setup = false;
 }
 
 function btnParClosed() {
-	document.getElementById('display').value += ')';
+  var search = parentesi.indexOf(document.getElementById('display').value.slice(-1),0);
+  if (search == -1){ 
+      document.getElementById('display').value += ')';
+  };
+  setup = false;
 }
-  		
+      
 function btnPoten() {
-  	document.getElementById('display').value = Math.pow(document.getElementById('display').value,2);
+  document.getElementById('display').value = Math.pow(document.getElementById('display').value,2);
+  setup = true;
+  dot = false;
 }
 
 function btnSqrt() {
-  	document.getElementById('display').value = Math.sqrt(document.getElementById('display').value);
+  document.getElementById('display').value = Math.sqrt(document.getElementById('display').value);
+  setup = true;
+  dot = false;
 }
 
 function btnSin() {
-  	document.getElementById('display').value = Math.sin(document.getElementById('display').value);
+  document.getElementById('display').value = Math.sin(document.getElementById('display').value);
+  setup = true;
+  dot = false;
 }
 
 function btnCos() {
-  	document.getElementById('display').value = Math.cos(document.getElementById('display').value);
+  document.getElementById('display').value = Math.cos(document.getElementById('display').value);
+  setup = true;
+  dot = false;
 }
 
 function btnTan() {
-  	document.getElementById('display').value = Math.tan(document.getElementById('display').value);
+  document.getElementById('display').value = Math.tan(document.getElementById('display').value);
+  setup = true;
+  dot = false;
 }
 
 function btnLog() {
-  	document.getElementById('display').value = Math.log(document.getElementById('display').value);
+  document.getElementById('display').value = Math.log(document.getElementById('display').value);
+  setup = true;
+  dot = false;
 }
 
 function btnPiGreco() {
-  	document.getElementById('display').value = Math.PI;
+  document.getElementById('display').value = Math.PI;
 }
 
 $('.pallino1').click(function() {
